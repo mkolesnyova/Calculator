@@ -1,5 +1,5 @@
-using OperationList;
-namespace WindowsFormsApp
+using CalculatorModel;
+namespace GraphicalCalculator
 {
     internal static class Program
     {
@@ -11,8 +11,8 @@ namespace WindowsFormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-                       
-            OperationLibrary model = new OperationLibrary();
+
+            Calculator model = new Calculator();
             FormsView view = new FormsView();
             FormsController controller = new FormsController(model, view);
 

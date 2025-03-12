@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using OperationList;
+﻿using CalculatorModel;
 using Button = System.Windows.Forms.Button;
 
-namespace WindowsFormsApp
+namespace GraphicalCalculator
 {
     public partial class FormsView : Form
     {
@@ -27,8 +17,8 @@ namespace WindowsFormsApp
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            var opLib = new OperationLibrary();
-            comboBoxOp.DataSource = opLib.operations.Keys.ToList();
+            var calcOperations = new CalculatorOperations();
+            comboBoxOp.DataSource = calcOperations.operations.Operations.Keys.ToList();
 
             if (comboBoxOp.Items.Count > 0)
                 comboBoxOp.SelectedIndex = 0;

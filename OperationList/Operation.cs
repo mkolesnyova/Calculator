@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OperationList
+﻿namespace CalculatorModel
 {
-    public class Operation : IOperation
+    sealed class Operation : IOperation
     {
 
-        Func<double[], double> AimFunc;
+        private Func<double[], double> AimFunc;
+        //private int ArgsNumber;
 
-        public Operation(Func<double[], double> aimFunc)
+        public Operation(Func<double[], double> aimFunc/*, int argsNumber*/)
         {
+            //ArgsNumber = argsNumber;
             AimFunc = aimFunc;
         }
 

@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp
+﻿namespace GraphicalCalculator
 {
     partial class FormsView
     {

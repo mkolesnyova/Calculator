@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using OperationList;
+using CalculatorModel;
+using CalculatorModel.CalculatorExceptions;
 
-namespace ConsoleApp
+namespace ConsoleCalculator
 {
     public class ConsoleController
     {
-        private readonly OperationLibrary _model;
+        private readonly Calculator _model;
         private readonly ConsoleView _view;
 
-        public ConsoleController(OperationLibrary model, ConsoleView view)
+        public ConsoleController(Calculator model, ConsoleView view)
         {
             _model = model;
             _view = view;
@@ -23,15 +24,21 @@ namespace ConsoleApp
             try
             {
                 string operation = _view.GetOperation();
-                double[] args = _view.GetArguments(operation);
+                string args = _view.GetArguments();
 
                 double result = _model.Calculate(operation, args);
                 _view.ShowResult(result);
+
             }
-            catch (Exception ex)
+            catch (CalculatorException ex)
             {
                 _view.ShowError(ex.Message);
             }
+
+            string choice = _view.ShowMenu();
+
+            if (choice.Length < 1) Run();                        
+
         }
 
     }

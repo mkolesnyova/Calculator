@@ -5,16 +5,16 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using OperationList;
+using CalculatorModel;
 
-namespace WindowsFormsApp
+namespace GraphicalCalculator
 {
     public class FormsController
     {
         private readonly FormsView _view;
-        private readonly OperationLibrary _model;
+        private readonly Calculator _model;
 
-        public FormsController(OperationLibrary model, FormsView view)
+        public FormsController(Calculator model, FormsView view)
         {
             _view = view;
             _model = model;
@@ -34,27 +34,12 @@ namespace WindowsFormsApp
             string op = _view.Operation;
             string args = _view.Arguments;
 
-            double[] argValues;
-
-
-            if (op != "pi" && op != "e")
-            {
-                argValues = ParseArguments(args);
-            }
-            else
-            {
-
-                argValues = new double[0];
-            }
-
             try
             {
 
-                if (_model.ContainsOperation(op))
-                {
-                    double result = _model.Calculate(op, argValues);
-                    _view.DisplayResult(result);
-                }
+                double result = _model.Calculate(op, args);
+                _view.DisplayResult(result);
+
             }
             catch (Exception ex)
             {
@@ -62,21 +47,6 @@ namespace WindowsFormsApp
             }
 
         }
-
-        public double[] ParseArguments(string args)
-        {
-            try
-            {
-
-                string[] inputArgs = args.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                return Array.ConvertAll(inputArgs, double.Parse);
-            }
-            catch
-            {
-                throw new Exception("Invalid arguments format.");
-            }
-        }
-
 
     }
 }

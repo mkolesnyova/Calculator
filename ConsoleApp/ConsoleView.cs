@@ -4,24 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp
+namespace ConsoleCalculator
 {
     public class ConsoleView
     {
+        public string ShowMenu()
+        {
+            Console.WriteLine("\n----------------------------------------------------");
+            Console.WriteLine("Press Enter to continue or any button to end calculation");
+            Console.Write("------------------------------------>> >> ");
+            return Console.ReadLine();
+        }
+               
+
         public string GetOperation()
         {
-            Console.Write("Op: ");
+            Console.Write("\nOp: ");           
             return Console.ReadLine();
         }
 
-        public double[] GetArguments(string operation)
+        public string GetArguments()
         {
-            if (operation == "pi" || operation == "e") return new double[0];
-
             Console.Write("Args: ");
-            string[] inputArgs = Console.ReadLine().Split(' ');
-
-            return Array.ConvertAll(inputArgs, double.Parse);
+            return Console.ReadLine();
         }
 
         public void ShowResult(double result)
