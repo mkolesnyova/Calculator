@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\MVCCalculator\CalculatorModel\CalculatorModel.csproj" />
+    <ProjectReference Include="..\CalculatorModel\CalculatorModel.csproj" />
   </ItemGroup>
 
 </Project>

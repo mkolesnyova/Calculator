@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphicalCalculator", "Wind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCalculator", "ConsoleApp\ConsoleCalculator.csproj", "{19B0D97F-1DCC-480D-97FD-ECEEAA72499D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorModel", "..\..\MVCCalculator\CalculatorModel\CalculatorModel.csproj", "{AAD0CB25-8AD5-414D-C489-FD8500F7EFF8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorModel", "CalculatorModel\CalculatorModel.csproj", "{E4B197CF-E91A-6DDD-30B0-4FBB6A8F236A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{19B0D97F-1DCC-480D-97FD-ECEEAA72499D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19B0D97F-1DCC-480D-97FD-ECEEAA72499D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19B0D97F-1DCC-480D-97FD-ECEEAA72499D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AAD0CB25-8AD5-414D-C489-FD8500F7EFF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AAD0CB25-8AD5-414D-C489-FD8500F7EFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AAD0CB25-8AD5-414D-C489-FD8500F7EFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AAD0CB25-8AD5-414D-C489-FD8500F7EFF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B197CF-E91A-6DDD-30B0-4FBB6A8F236A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B197CF-E91A-6DDD-30B0-4FBB6A8F236A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B197CF-E91A-6DDD-30B0-4FBB6A8F236A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B197CF-E91A-6DDD-30B0-4FBB6A8F236A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
