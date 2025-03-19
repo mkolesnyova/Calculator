@@ -2,7 +2,7 @@
 {
     public interface IOperation
     {
-        double Call(params double[] args);
+        double Call(double[] args);
 
     }
 

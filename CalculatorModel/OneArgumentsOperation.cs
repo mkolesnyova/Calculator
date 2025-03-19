@@ -11,7 +11,7 @@ namespace CalculatorModel
             AimFunc = aimFunc;
         }
 
-        public double Call(params double[] args)
+        public double Call(double[] args)
         {
             if (args.Length != 1)
                 throw new CalculatorException("This operation needs one argument.");
