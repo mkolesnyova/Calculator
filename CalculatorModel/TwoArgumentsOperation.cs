@@ -14,7 +14,7 @@ namespace CalculatorModel
         public double Call(double[] args)
         {
             if (args.Length != 2)
-                throw new CalculatorException("This operation needs two arguments.");
+                throw new CalculatorInvalidArgumentsAmountException("This operation needs two arguments.");
             return AimFunc(args[0], args[1]);
         }
 

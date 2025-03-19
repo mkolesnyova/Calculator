@@ -14,7 +14,7 @@ namespace CalculatorModel
         public double Call(double[] args)
         {
             if (args.Length != 0)
-                throw new CalculatorException("This operation doesn't need any arguments.");
+                throw new CalculatorInvalidArgumentsAmountException("This operation doesn't need any arguments.");
             return AimFunc();
         }
     }
