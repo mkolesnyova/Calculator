@@ -52,21 +52,13 @@ namespace CalculatorModel
 
         public double Calculate(string operation, string arguments)
         {
-            try
-            {
-                operation.CheckInputOperation();
+            operation.CheckInputOperation();
 
-                double[] args = ParseArguments(arguments);
-                
-                double result = setOperation.Operations[operation].Call(args);
+            double[] args = ParseArguments(arguments);
 
-                return result.CheckOutput();
-            }
-            catch (CalculatorException ex)
-            {
-                throw new CalculatorException($"Calculation error. {ex.Message}", ex);
-            }
+            double result = setOperation.Operations[operation].Call(args);
 
+            return result.CheckOutput();
         }
 
         public double[] ParseArguments(string args)
