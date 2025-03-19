@@ -6,12 +6,12 @@ namespace CalculatorModel
     {   
         public static string CheckInputOperation(this string inputValue)
         {
-            CalculatorOperations calcOperations = new();
+            Calculator calculator = new();
 
             if (inputValue.Length < 1)
                 throw new CalculatorInvalidInputException("There is no operation enteries.");
 
-            if (!calcOperations.ContainsOperation(inputValue))
+            if (!calculator.ContainsOperation(inputValue))
                 throw new CalculatorInvalidInputException($"Unknown operation: {inputValue}");
 
             return inputValue;
