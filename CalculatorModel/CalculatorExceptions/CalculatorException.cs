@@ -1,6 +1,6 @@
 ﻿namespace CalculatorModel.CalculatorExceptions
 {
-    public class CalculatorException : Exception
+    public abstract class CalculatorException : Exception
     {
         public CalculatorException()
         {
